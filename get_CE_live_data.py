@@ -37,7 +37,7 @@ def on_open(wsapp):
 
 def on_data(wsapp, message):
     try:
-        with open('sept\\live_data\\BN_CE_DATA_'+today+'.csv', 'a', newline='') as csvfile:
+        with open('oct\\live_data\\BN_CE_DATA_'+today+'.csv', 'a', newline='') as csvfile:
               writer = csv.writer(csvfile)
               writer.writerow([datetime.fromtimestamp(message['exchange_timestamp']/1000)
                                .isoformat(), message["last_traded_price"]/100])
