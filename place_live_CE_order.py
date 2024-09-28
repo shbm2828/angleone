@@ -102,10 +102,10 @@ def modify_order(token,low,order_id,instrument_list):
     return response
 
 def ce_place_order():
-    ce_df_1_temp = pd.read_csv('D:\\key\\april\\candle_data\\BN_CE_1min_candle_'+today+'.csv')
+    ce_df_1_temp = pd.read_csv('D:\\key\\oct\\candle_data\\BN_CE_1min_candle_'+today+'.csv')
     ce_df_1_temp.columns=['date', 'ce_1_open', 'ce_1_high', 'ce_1_low', 'ce_1_close']
     ce_df_1 = ce_df_1_temp.iloc[-2]
-    ce_df_30 = pd.read_csv('D:\\key\\april\\candle_data\\BN_CE_30min_candle_'+today+'.csv', names=['date', 'ce_30_open', 'ce_30_high', 'ce_30_low', 'ce_30_close'])
+    ce_df_30 = pd.read_csv('D:\\key\\oct\\candle_data\\BN_CE_30min_candle_'+today+'.csv', names=['date', 'ce_30_open', 'ce_30_high', 'ce_30_low', 'ce_30_close'])
     high = ce_df_30.iloc[-2]['ce_30_high']
     low = ce_df_30.iloc[-2]['ce_30_low']
     if float(ce_df_1['ce_1_close']) > high and (float(ce_df_1['ce_1_open'])-float(ce_df_1['ce_1_close'])) >= (float(ce_df_1['ce_1_high'])-float(ce_df_1['ce_1_low']))*0.8:
