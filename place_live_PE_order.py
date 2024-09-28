@@ -118,10 +118,10 @@ def modify_order(token,low,order_id,instrument_list):
 
 
 def pe_place_order():
-    pe_df_1_temp = pd.read_csv('D:\\key\\april\\candle_data\\BN_PE_1min_candle_'+today+'.csv')
+    pe_df_1_temp = pd.read_csv('D:\\key\\oct\\candle_data\\BN_PE_1min_candle_'+today+'.csv')
     pe_df_1_temp.columns=['date', 'pe_1_open', 'pe_1_high', 'pe_1_low', 'pe_1_close']
     pe_df_1 = pe_df_1_temp.iloc[-2]
-    pe_df_30 = pd.read_csv('D:\\key\\april\\candle_data\\BN_PE_30min_candle_'+today+'.csv', names=['date', 'pe_30_open', 'pe_30_high', 'pe_30_low', 'pe_30_close'])
+    pe_df_30 = pd.read_csv('D:\\key\\oct\\candle_data\\BN_PE_30min_candle_'+today+'.csv', names=['date', 'pe_30_open', 'pe_30_high', 'pe_30_low', 'pe_30_close'])
     high = pe_df_30.iloc[-2]['pe_30_high']
     low = pe_df_30.iloc[-2]['pe_30_low']
                       
